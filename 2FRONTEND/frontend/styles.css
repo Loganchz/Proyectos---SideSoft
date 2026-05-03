@@ -1,0 +1,154 @@
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --primary: #0f4c81;
+  --primary-hover: #0c3d67;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dbe2ea;
+  --success: #127a3f;
+  --danger: #b42318;
+  --shadow: 0 10px 24px rgba(15, 76, 129, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--primary);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: var(--primary);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.05s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.status {
+  min-height: 22px;
+  margin: 6px 0 14px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.table-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: auto;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  min-width: 960px;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--surface-2);
+}
+
+th,
+td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+  font-size: 0.93rem;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  user-select: none;
+}
+
+tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+  background: #f7fbff;
+}
+
+th.active {
+  color: var(--primary);
+  background: #edf4fb;
+}
+
+.positive {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.negative {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 9px 14px;
+    font-size: 0.86rem;
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Criptomonedas</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Top 100 Criptomonedas</h1>
+        <button id="refreshBtn" type="button">Actualizar</button>
+      </header>
+
+      <p id="status" class="status" aria-live="polite"></p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort-key="rank">#</th>
+              <th data-sort-key="name">Nombre</th>
+              <th data-sort-key="price">Precio</th>
+              <th data-sort-key="marketCap">Capitalización</th>
+              <th data-sort-key="maxSupply">Suministro Máximo</th>
+              <th data-sort-key="circulatingSupply">Suministro Circulante</th>
+              <th data-sort-key="change1d">1D %</th>
+              <th data-sort-key="change30d">30D %</th>
+            </tr>
+          </thead>
+          <tbody id="cryptoTableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
